@@ -1,14 +1,5 @@
 USE codeup_test_db;
 
--- Steps 1 & 2 of Exercise
--- SELECT 'All albums in my table' AS 'All Albums';
-SELECT * FROM albums;
-
--- SELECT 'Albums w/ release date < 1980' AS 'Pre 1980 Albums';
-SELECT * FROM albums WHERE release_date < 1980;
-
--- SELECT 'Albums by Michael Jackson' AS 'MJ Albums';
-SELECT * FROM albums WHERE artist = 'Michael Jackson';
 -- Step 3 & 4 of Exercise
 -- Beginning of Update query statements
 SELECT 'Making all albums 10x more popular' AS 'Multiplied Albums';
@@ -21,10 +12,10 @@ SELECT * FROM albums;
 
 SELECT 'Moving pre 80''s albums to 1901' AS 'Moving Albums';
 UPDATE albums
-SET release_date = 1901
+SET release_date = 1800
 WHERE release_date < 1980;
 
-SELECT * FROM albums WHERE release_date = 1901;
+SELECT * FROM albums WHERE release_date = 1800;
 
 
 SELECT 'Ruining the KING OF POP' AS 'Name Change';
