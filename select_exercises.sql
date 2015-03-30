@@ -14,7 +14,9 @@ SELECT * FROM albums WHERE release_date BETWEEN 1990 AND 1999;
 -- Which albums had less than 20 million certified sales (All) --
 SELECT * FROM albums WHERE sales_in_millions < 20;
 -- All the albums in the rock genre. 
-SELECT * FROM albums WHERE genre = 'rock';
+-- Using the 'LIKE' keyword as well as the % around your search term will allow anything
+-- from the column- genre with the search term in it to be returned.
+SELECT * FROM albums WHERE genre LIKE '%rock%';
 -- Is this all the rock albums in the table?
 -- NO it just gave me back the ones where rock is the only genre listed
 
