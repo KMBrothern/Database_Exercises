@@ -1,4 +1,5 @@
 USE codeup_test_db;
+TRUNCATE albums;
 
 INSERT INTO albums (artist, record_name, sales_in_millions, release_date, genre)
 VALUES ('Shania Twain', 'Come On Over', 29.6, 1997, 'Country, pop'),
