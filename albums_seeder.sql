@@ -3,7 +3,7 @@ TRUNCATE albums;
 
 INSERT INTO albums (artist, record_name, sales_in_millions, release_date, genre)
 VALUES ('Shania Twain', 'Come On Over', 29.6, 1997, 'Country, pop'),
-        ('Led Zeppelin', 'Led Zepelin IV', 29, 1971, 'Hard rock, heavy metal'),
+        ('Led Zeppelin', 'Led Zeppelin IV', 29, 1971, 'Hard rock, heavy metal'),
         ('Alanis Morissette', 'Jagged Little Pill', 24.8, 1995, 'Alternative rock'),
         ('Celine Dion', 'Falling into You', 20.2, 1996, 'Pop/Soft rock'),
         ('The Beatles', 'Sgt. Pepper''s Lonely Hearts Club Band', 13.1, 1967, 'Rock'),
