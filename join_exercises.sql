@@ -1,3 +1,21 @@
+-- Although not explicitly covered in the lesson, aggregate functions like count can be used with join queries.
+ -- Use count and the appropriate join type to get a list of roles along with the number of users that has the role. 
+ -- Hint: You will also need to use group by in the query.
+SELECT count(*), roles.name AS role_name
+FROM roles
+JOIN users ON users.role_id = roles.id
+GROUP BY roles.id;
+
+-- Using the example in the "Associative Table Joins" section as a guide, write a query
+-- that shows each department along with the name of the current manager for that department.
+SELECT CONCAT(e.first_name, ' ', e.last_name) AS employee_full_name, d.dept_name AS department_name
+FROM employees AS e
+JOIN dept_manager AS dm
+ON dm.emp_no = e.emp_no
+JOIN departments AS d
+ON d.dept_no = dm.dept_no
+WHERE dm.to_date = '9999-01-01';
+
 -- Find the name of  all departments currently managed by women.
 SELECT CONCAT(e.first_name, ' ', e.last_name) AS employee_full_name, d.dept_name AS department_name
 FROM employees AS e
@@ -5,7 +23,7 @@ JOIN dept_manager AS dm
 ON dm.emp_no = e.emp_no
 JOIN departments AS d
 ON d.dept_no = dm.dept_no
-WHERE e.gender = 'F' AND dm.to_date = '9999-01-01'
+WHERE e.gender = 'F' AND dm.to_date = '9999-01-01';
 
 -- Results:
 -- employee_full_name   department_name
@@ -21,8 +39,6 @@ JOIN dept_emp AS de
 ON de.emp_no = t.emp_no
 WHERE de.to_date = '9999-01-01'
 ORDER BY title; 
--- Haven't figured out how to do the counts yet
--- Results are titles(I have), counts(I don't have yet) will be() when I figure out how to do it
 -- Title                         Count  
 -- Assistant Engineer                68
 -- Engineer                         627
